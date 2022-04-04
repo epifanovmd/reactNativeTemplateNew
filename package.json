@@ -60,7 +60,6 @@
     "react-native-svg": "^12.3.0",
     "react-native-switch-toggle": "^2.2.1",
     "react-native-tab-view": "^3.1.1",
-    "react-native-vector-icons": "^9.1.0",
     "yup": "^0.29.3"
   },
   "devDependencies": {
@@ -75,7 +74,6 @@
     "@types/lodash-es": "^4.17.6",
     "@types/react-i18next": "^8.1.0",
     "@types/react-native": "^0.67.3",
-    "@types/react-native-vector-icons": "^6.4.10",
     "@types/unist": "^2.0.6",
     "@types/yup": "^0.29.9",
     "@typescript-eslint/eslint-plugin": "^5.17.0",
