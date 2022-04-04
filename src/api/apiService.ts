@@ -1,4 +1,4 @@
-// import Config from "react-native-config";
+import Config from "react-native-config";
 import axios, { AxiosInstance, AxiosRequestConfig } from "axios";
 import { NotificationManager } from "../components/notification";
 
@@ -145,4 +145,4 @@ export class ApiService {
   }
 }
 
-export const apiService = new ApiService({ baseURL: "http://jsonplaceholder.typicode.com/" });
+export const apiService = new ApiService({ baseURL: `${Config.BASE_URL}/` });

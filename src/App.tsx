@@ -5,7 +5,7 @@ import RNBootSplash from "react-native-bootsplash";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { ThemeProvider } from "./common";
 import { SafeAreaProvider } from "react-native-safe-area-context";
-// import Config from "react-native-config";
+import Config from "react-native-config";
 import { AppScreens } from "./AppScreens";
 import { Notification } from "./components/notification";
 import { StatusBar } from "./components";
@@ -14,7 +14,6 @@ import { configure } from "mobx";
 
 configure({ enforceActions: "observed" });
 
-// RNBootSplash.show().then();
 initLocalization({ initLang: "ru" });
 
 const App = () => {
@@ -27,7 +26,7 @@ const App = () => {
       }
     });
 
-    // console.log("CONFIG", JSON.stringify(Config));
+    console.log("CONFIG", JSON.stringify(Config));
   }, [i18n]);
 
   const onReady = useCallback(() => {
