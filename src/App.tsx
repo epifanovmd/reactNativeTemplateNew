@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect } from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { initLocalization, useTranslation } from "./localization";
-// import RNBootSplash from "react-native-bootsplash";
+import RNBootSplash from "react-native-bootsplash";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { ThemeProvider } from "./common";
 import { SafeAreaProvider } from "react-native-safe-area-context";
@@ -31,11 +31,11 @@ const App = () => {
   }, [i18n]);
 
   const onReady = useCallback(() => {
-    // RNBootSplash.getVisibilityStatus().then(status => {
-    //   if (status === "visible") {
-    //     RNBootSplash.hide({ fade: true }).then();
-    //   }
-    // });
+    RNBootSplash.getVisibilityStatus().then(status => {
+      if (status === "visible") {
+        RNBootSplash.hide({ fade: true }).then();
+      }
+    });
   }, []);
 
   // fix hide with live reloading app

@@ -40,9 +40,14 @@ public class MainActivity extends ReactActivity {
     }
 
     @Override
+    protected void loadApp(String appKey) {
+      RNBootSplash.init(getPlainActivity()); // <- initialize the splash screen
+      super.loadApp(appKey);
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
       super.onCreate(null);
-      RNBootSplash.init(R.drawable.bootsplash, MainActivity.this);
     }
   }
 }
